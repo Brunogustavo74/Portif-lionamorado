@@ -3,8 +3,10 @@
     --bg: #061027;
     --card: #0f1724a8;
     --muted: #98a4b3;
-    --accent1: #e6455a; /* vermelho profundo */
-    --accent2: #ff94b0; /* rosa suave */
+    --accent1: #e6455a;
+    /* vermelho profundo */
+    --accent2: #ff94b0;
+    /* rosa suave */
     --glass: rgba(255, 255, 255, 0.08);
     --radius: 12px;
     --container: 1100px;
@@ -12,7 +14,9 @@
     --header-offset: 78px;
 }
 
-*{box-sizing: border-box}
+* {
+    box-sizing: border-box
+}
 
 html,
 body {
@@ -23,18 +27,22 @@ body {
     margin: 0;
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     /* Gradiente romântico refinado — vários tons de vermelho com contraste otimizado */
-    background-color: #2b021a; /* fallback */
+    background-color: #2b021a;
+    /* fallback */
     background-image: linear-gradient(45deg,
-        rgba(43,2,26,1) 0%,       /* vinho profundo */
-        rgba(64,7,34,0.95) 18%,
-        rgba(120,18,45,0.92) 38%,
-        rgba(183,36,62,0.90) 60%, /* vermelho intenso */
-        rgba(255,107,132,0.88) 78%, /* rosa quente */
-        rgba(43,2,26,1) 100%
-    );
+            rgba(43, 2, 26, 1) 0%,
+            /* vinho profundo */
+            rgba(64, 7, 34, 0.95) 18%,
+            rgba(120, 18, 45, 0.92) 38%,
+            rgba(109, 24, 40, 0.9) 60%,
+            /* vermelho intenso */
+            rgba(94, 37, 47, 0.88) 78%,
+            /* rosa quente */
+            rgba(43, 2, 26, 1) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #fff; /* texto claro para contraste consistente */
+    color: #fff;
+    /* texto claro para contraste consistente */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.5;
@@ -153,7 +161,7 @@ body {
     border-radius: 50%;
     background-image: url(./assets/caiky.jpeg);
     background-size: cover;
-   background-position: center;
+    background-position: center;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
     margin-bottom: 1rem;
 }
@@ -176,7 +184,8 @@ body {
 }
 
 /* Evita que âncoras sejam cobertas pelo header sticky */
-.section, #hero {
+.section,
+#hero {
     scroll-margin-top: var(--header-offset);
 }
 
@@ -227,7 +236,7 @@ body {
     display: inline-block;
     height: 12px;
     width: 60%;
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.03);
     border-radius: 8px;
     position: relative;
     overflow: hidden;
@@ -245,12 +254,31 @@ body {
     transition: width 900ms cubic-bezier(.22, .9, .32, 1)
 }
 
-.skill-list li > span:first-child{flex:1;color:var(--muted)}
+.skill-list li>span:first-child {
+    flex: 1;
+    color: var(--muted)
+}
 
 /* Tech list inside projects (reuse skill bar styles) */
-.tech-list{list-style:none;margin:0;padding:0;margin-top:0.6rem}
-.project .tech-list li{display:flex;align-items:center;justify-content:space-between;padding:0.45rem 0;border-bottom:1px dashed rgba(255,255,255,0.02)}
-.project .tech-list li > span:first-child{flex:1;color:var(--muted)}
+.tech-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.6rem
+}
+
+.project .tech-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.45rem 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.02)
+}
+
+.project .tech-list li>span:first-child {
+    flex: 1;
+    color: var(--muted)
+}
 
 /* TIMELINE */
 .timeline {
